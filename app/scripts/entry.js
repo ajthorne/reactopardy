@@ -2,15 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, hashHistory, Route } from 'react-router';
 import Nav from './components/Nav';
-import Question from './components/Question';
+import Category from './components/Category';
 import QuestionSingle from './components/QuestionSingle';
+import Gameboard from './components/Gameboard';
 
 const App = React.createClass({
   render: function () {
     return (
       <div className='main-content'>
         <Nav />
-        <Question />
+        <Gameboard />
         {this.props.children}
       </div>
     )
