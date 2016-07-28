@@ -11,6 +11,8 @@ const Category = React.createClass({
     // hashHistory.push(`/question/${this.props.index}`)
   },
   render: function () {
+    // console.log(this.props.index);
+
     return (
       <div>
         <h3>{this.props.title}</h3>
