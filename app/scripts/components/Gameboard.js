@@ -1,7 +1,6 @@
 //parent to category components
-
 //map over data to return array of categories and questions
-//container for single questions
+//container for categories and questions
 
 import React from 'react';
 import Category from './Category';
@@ -15,7 +14,8 @@ const Gameboard = React.createClass({
     },
 
     componentDidMount: function() {
-        store.categoriesCollection.fetch();
+        store.categoriesCollection.getCollection();
+        //custom function to send ajax requests/'get' data
         store.categoriesCollection.on('update change', () => {
             this.setState({
                 categoriesCollection: store.categoriesCollection.toJSON()
@@ -24,14 +24,14 @@ const Gameboard = React.createClass({
     },
     render: function() {
         let categories = this.state.categoriesCollection.map((category, i, arr) => {
-            console.log(category.title);
+            // console.log(category.title);
             // console.log(category);
             return (
-                <Category key={i} index={i} title={category.title}/>
+                <Category key={i} cid={category.id} title={category.title}/>
             );
         })
         return (
-          <div>
+          <div className="category-container">
             {categories}
           </div>
         )

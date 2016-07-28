@@ -1,0 +1,44 @@
+.container {
+}
+
+.category-container {
+  display: flex;
+  flex-flow: row;
+  // flex: 0 0 100%;
+  width: 100%;
+  // justify-content: space-between;
+  // flex-grow: 1;
+
+
+  .individual-category {
+    border: 1px solid black;
+    padding: 1%;
+    margin-top: 2rem;
+    font-size: 1.3rem;
+
+    ul {
+      padding-left: 0;
+    }
+
+    li {
+      text-align: center;
+      padding: 1%;
+      list-style-type: none;
+      border: 1px solid black;
+    }
+  }
+}
+
+nav {
+
+  h2 {
+    float: right;
+    margin-top: 0;
+  }
+    .score {
+        border: 1px solid black;
+        width: 20%;
+        margin: 0 auto;
+        padding: 1%;
+    }
+}

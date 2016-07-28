@@ -1,3 +1,27 @@
+.category-container {
+  display: flex;
+  flex-flow: row;
+  width: 100%; }
+  .category-container .individual-category {
+    border: 1px solid black;
+    padding: 1%;
+    margin-top: 2rem;
+    font-size: 1.3rem; }
+    .category-container .individual-category ul {
+      padding-left: 0; }
+    .category-container .individual-category li {
+      text-align: center;
+      padding: 1%;
+      list-style-type: none;
+      border: 1px solid black; }
 
+nav h2 {
+  float: right;
+  margin-top: 0; }
+nav .score {
+  border: 1px solid black;
+  width: 20%;
+  margin: 0 auto;
+  padding: 1%; }
 
 /*# sourceMappingURL=main.css.map */

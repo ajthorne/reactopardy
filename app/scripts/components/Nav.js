@@ -8,12 +8,13 @@ const Nav = React.createClass({
     console.log('Starting a new game...');
     //click handler for refreshing/rendering to new game
   },
-  
+
   render: function () {
     return (
       <nav>
         <input type="button" value="New Game" onClick={this.newGameHandler}/>
         <h2>React-Pardy!</h2>
+        <div className="score">Your score: </div>
       </nav>
     )
   }

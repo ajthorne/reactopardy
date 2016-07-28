@@ -1,27 +1,21 @@
-//map over data to return array of categories and questions
 //container for single questions
 
 import React from 'react';
 import { hashHistory } from 'react-router';
+import Question from './Question';
 
 
 const Category = React.createClass({
-  questionHandler: function () {
-    hashHistory.push('/question')
-    // hashHistory.push(`/question/${this.props.index}`)
-  },
   render: function () {
-    // console.log(this.props.index);
-
     return (
-      <div>
+      <div className="individual-category">
         <h3>{this.props.title}</h3>
         <ul>
-            <li onClick={this.questionHandler}>$200</li>
-            <li onClick={this.questionHandler}>$400</li>
-            <li onClick={this.questionHandler}>$600</li>
-            <li onClick={this.questionHandler}>$800</li>
-            <li onClick={this.questionHandler}>$1000</li>
+            <Question cid={this.props.cid} qindex={0} value={200}/>
+            <Question cid={this.props.cid} qindex={1} value={400}/>
+            <Question cid={this.props.cid} qindex={2} value={600}/>
+            <Question cid={this.props.cid} qindex={3} value={800}/>
+            <Question cid={this.props.cid} qindex={4} value={1000}/>
           </ul>
       </div>
     )

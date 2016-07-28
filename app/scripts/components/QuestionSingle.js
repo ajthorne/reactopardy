@@ -1,6 +1,6 @@
 import React from 'react';
 import { hashHistory } from 'react-router';
-
+import store from '../store';
 
 const QuestionSingle = React.createClass({
   getInitialState: function () {
@@ -11,13 +11,27 @@ const QuestionSingle = React.createClass({
     this.setState({userAnswered: true});
     console.log(this.refs.answer.value);
     console.log('You submitted an answer!');
+
+    let answer = store.categoriesCollection.get(this.props.params.cid).get('clues')[this.props.params.qindex].answer;
+
+    if (this.refs.answer.value === answer) {
+      console.log('CORRECT, YOU GOT IT!');
+    } else {
+      console.log('WRONG, YOU MISSED IT!');
+    }
   },
 
   render: function () {
     let answerArea;
+    let question = store.categoriesCollection.get(this.props.params.cid).get('clues')[this.props.params.qindex].question;
+    let answer = store.categoriesCollection.get(this.props.params.cid).get('clues')[this.props.params.qindex].answer;
+    let value = (store.categoriesCollection.get(this.props.params.cid).get('clues')[this.props.params.qindex].value) * 2;
+
+    console.log(question);
+    console.log(answer);
 
     if (this.state.userAnswered) {
-      answerArea = <p>Wranglers</p>
+      answerArea = <p>{answer}</p>
     } else {
       answerArea = (<div>
       <input type="text" placeholder="Enter your answer" ref="answer"/>
@@ -27,7 +41,8 @@ const QuestionSingle = React.createClass({
 
     return (
       <form>
-          <li>In the Old West they were in charge of horses, on a movie set in charge of chickens</li>
+          <h2>{question}</h2>
+          <span>Points: {value}</span>
           {answerArea}
       </form>
     )
