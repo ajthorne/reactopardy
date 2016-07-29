@@ -1,7 +1,7 @@
 .category-container {
   display: flex;
   flex-flow: row;
-  width: 100%; }
+  flex: 0 0 12rem; }
   .category-container .individual-category {
     border: 1px solid black;
     padding: 1%;
