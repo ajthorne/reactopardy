@@ -6,7 +6,10 @@ const CategoryModel = Backbone.Model.extend({
     defaults: {
       id: '',
       title: ''
-    }
+    },
+    // userViewed: function (question) {
+    //   // if ()
+    // }
 
 });
 

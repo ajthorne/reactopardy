@@ -24,10 +24,12 @@ const Gameboard = React.createClass({
     },
     render: function() {
         let categories = this.state.categoriesCollection.map((category, i, arr) => {
+          let index = i
             // console.log(category.title);
             // console.log(category);
+            // console.log(category.id);
             return (
-                <Category key={i} cid={category.id} title={category.title}/>
+                <Category key={i} clues={category.clues[index]} cid={category.id} title={category.title}/>
             );
         })
         return (

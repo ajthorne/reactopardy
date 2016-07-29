@@ -53,6 +53,7 @@ const QuestionSingle = React.createClass({
     let answer = store.categoriesCollection.get(this.props.params.cid).get('clues')[this.props.params.qindex].answer;
     let value = (store.categoriesCollection.get(this.props.params.cid).get('clues')[this.props.params.qindex].value) * 2;
     let color = this.state.userCorrect ? '#30D432' : 'red';
+    //shorthand for if/else statement
 
     console.log(question);
     console.log(answer);
