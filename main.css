@@ -1,19 +1,23 @@
 .category-container {
   display: flex;
-  flex-flow: row;
-  flex: 0 0 12rem; }
+  flex-flow: row; }
   .category-container .individual-category {
     border: 1px solid black;
-    padding: 1%;
+    text-align: center;
+    text-transform: capitalize;
     margin-top: 2rem;
-    font-size: 1.3rem; }
+    font-size: 1.3rem;
+    flex-basis: 17%; }
     .category-container .individual-category ul {
       padding-left: 0; }
     .category-container .individual-category li {
       text-align: center;
-      padding: 1%;
+      padding: 3%;
+      font-size: 4rem;
       list-style-type: none;
-      border: 1px solid black; }
+      border-top: 1px solid black; }
+      .category-container .individual-category li li:not(last-child) {
+        border-bottom: 1px solid black; }
 
 nav h2 {
   float: right;
