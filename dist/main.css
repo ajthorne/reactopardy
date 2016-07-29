@@ -15,7 +15,8 @@
       padding: 3%;
       font-size: 4rem;
       list-style-type: none;
-      border-top: 1px solid black; }
+      border-top: 1px solid black;
+      height: 11vh; }
       .category-container .individual-category li li:not(last-child) {
         border-bottom: 1px solid black; }
 
