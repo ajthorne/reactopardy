@@ -42,7 +42,7 @@ const Categories = Backbone.Collection.extend({
       }
     }),
     $.ajax({
-      url: 'http://jservice.io/api/category?id=227',
+      url: 'http://jservice.io/api/category?id=770',
       success: (response) => {
         this.add(response)
       }

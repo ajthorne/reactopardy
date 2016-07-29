@@ -1,12 +1,30 @@
 import React from 'react';
 import { hashHistory } from 'react-router';
-// import { Link } from 'react-router';
+import store from '../store';
 
 const Nav = React.createClass({
+  getInitialState: function() {
+    // console.log(store.session.get('score'));
+      return {
+          session: store.session.toJSON()
+      }
+  },
+
+  componentDidMount: function() {
+      store.session.get();
+      store.session.on('update change', () => {
+          this.setState({
+              session: store.session.toJSON()
+          });
+      })
+  },
+
   newGameHandler: function (evt) {
     hashHistory.push('/');
+    store.session.set('score', 0);
     console.log('Starting a new game...');
     //click handler for refreshing/rendering to new game
+    //setting score back to default 0. is there a better way to do this?
   },
 
   render: function () {
@@ -14,7 +32,7 @@ const Nav = React.createClass({
       <nav>
         <input type="button" value="New Game" onClick={this.newGameHandler}/>
         <h2>React-Pardy!</h2>
-        <div className="score">Your score: </div>
+        <div className="score">Your score: {store.session.get('score')}</div>
       </nav>
     )
   }
