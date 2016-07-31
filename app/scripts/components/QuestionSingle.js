@@ -68,9 +68,13 @@ const QuestionSingle = React.createClass({
       </div>)
     }
 
+    let categoryTitle = store.categoriesCollection.get(this.props.params.cid).get('title');
+
+
     return (
       <div>
         <form className="question-container">
+            <span className="category-title">{categoryTitle}</span>
             <span className="point-value">Points: {value}</span>
             <h2>{question}</h2>
             {answerArea}

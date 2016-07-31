@@ -76,7 +76,16 @@ nav {
         margin-top: 3rem;
         font-size: 2rem;
         color: #FDC68C;
-        padding: 1%;  
+        padding: 1%;
+    }
+
+    .category-title {
+      text-transform: uppercase;
+      padding: 1.5%;
+      color: white;
+      font-weight: bold;
+      float: left;
+      font-size: 1rem;
     }
     .point-value {
         float: right;
