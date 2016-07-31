@@ -60,24 +60,29 @@ const QuestionSingle = React.createClass({
     // console.log(this.state.userCorrect);
 
     if (this.state.userAnswered) {
-      answerArea = <p style={{color: color}}>{answer}</p>
+      answerArea = <p className="show-answer" style={{color: color}}>{answer}</p>
     } else {
-      answerArea = (<div>
-      <input type="text" placeholder="Enter your answer" ref="answer"/>
+      answerArea = (<div className="answer-container">
+      <input className="answer-input" type="text" placeholder="Enter your answer" ref="answer"/>
       <input className="submitAnswer" onClick={this.submitAnswer} type="submit" value="Submit"/>
       </div>)
     }
 
     return (
-      <form>
-          <h2>{question}</h2>
-          <span>Points: {value}</span>
-          {answerArea}
-          <input type="button" value="Back to Game" onClick={this.backGameHandler}/>
-      </form>
-
+      <div>
+        <form className="question-container">
+            <span className="point-value">Points: {value}</span>
+            <h2>{question}</h2>
+            {answerArea}
+        </form>
+        <div className="back-input-holder">
+          <input className="back-input" type="button" value="Back to Game" onClick={this.backGameHandler}/>
+        </div>
+      </div>
     )
   }
 });
 
 export default QuestionSingle;
+
+// <i className="fa fa-arrow-circle-left"></i>

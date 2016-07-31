@@ -21,6 +21,7 @@ const Nav = React.createClass({
 
   newGameHandler: function (evt) {
     hashHistory.push('/');
+    store.categoriesCollection.get(this.props.cid).get('clues')[this.props.qindex].userViewed = false;
     store.session.set('score', 0);
     console.log('Starting a new game...');
     //click handler for refreshing/rendering to new game
@@ -30,9 +31,8 @@ const Nav = React.createClass({
   render: function () {
     return (
       <nav>
-        <input type="button" value="New Game" onClick={this.newGameHandler}/>
-        <h2>React-Pardy!</h2>
         <div className="score">Your score: {store.session.get('score')}</div>
+        <h2>React-Pardy!</h2>
       </nav>
     )
   }
@@ -40,5 +40,7 @@ const Nav = React.createClass({
 
 //to add
 // <img src='question-icon'/>
+// <input type="button" value="New Game" onClick={this.newGameHandler}/>
+
 
 export default Nav;
