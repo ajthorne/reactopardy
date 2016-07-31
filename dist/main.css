@@ -21,6 +21,7 @@ body {
     text-transform: capitalize;
     color: white;
     font-size: 1.3rem;
+    width: 17%;
     flex-basis: 17%; }
     .category-container .individual-category ul {
       padding-left: 0; }
@@ -113,5 +114,24 @@ nav {
     .back-input-holder .back-input:hover {
       color: #FDC68C;
       transform: scale(1.2); }
+
+@media (max-width: 840px) {
+  .category-container .individual-category {
+    font-size: 1rem;
+    width: 16%;
+    flex-basis: 16%; }
+    .category-container .individual-category li {
+      font-size: 2.9rem; } }
+@media (max-width: 480px) {
+  nav h2 {
+    font-size: 1.5rem; }
+  nav .score {
+    font-size: 1.2rem; }
+
+  .category-container .individual-category {
+    width: 15%;
+    font-size: 0.6rem; }
+    .category-container .individual-category li {
+      font-size: 1.6rem; } }
 
 /*# sourceMappingURL=main.css.map */

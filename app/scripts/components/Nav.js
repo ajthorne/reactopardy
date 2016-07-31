@@ -19,14 +19,15 @@ const Nav = React.createClass({
       })
   },
 
-  newGameHandler: function (evt) {
-    hashHistory.push('/');
-    store.categoriesCollection.get(this.props.cid).get('clues')[this.props.qindex].userViewed = false;
-    store.session.set('score', 0);
-    console.log('Starting a new game...');
-    //click handler for refreshing/rendering to new game
-    //setting score back to default 0. is there a better way to do this?
-  },
+  // newGameHandler: function (evt) {
+  //   hashHistory.push('/');
+  //   store.categoriesCollection.reset();
+  //   store.session.set('score', 0);
+  //   console.log('Starting a new game...');
+  //   click handler for refreshing/rendering to new game
+  //   setting score back to default 0. is there a better way to do this?
+  //   not working -- reset the state?
+  // },
 
   render: function () {
     return (
@@ -39,7 +40,6 @@ const Nav = React.createClass({
 });
 
 //to add
-// <img src='question-icon'/>
 // <input type="button" value="New Game" onClick={this.newGameHandler}/>
 
 
