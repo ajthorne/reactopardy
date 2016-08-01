@@ -21,12 +21,12 @@ const Nav = React.createClass({
 
   // newGameHandler: function (evt) {
   //   hashHistory.push('/');
-  //   store.categoriesCollection.reset();
+  //   this.setState(getInitialState());
   //   store.session.set('score', 0);
   //   console.log('Starting a new game...');
-  //   click handler for refreshing/rendering to new game
-  //   setting score back to default 0. is there a better way to do this?
-  //   not working -- reset the state?
+  //   // click handler for refreshing/rendering to new game
+  //   // setting score back to default 0. is there a better way to do this?
+  //   // not working -- reset the state?
   // },
 
   render: function () {

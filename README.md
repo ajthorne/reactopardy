@@ -1,28 +1,22 @@
-# Basic Build with NPM scripts
-This is a project scaffolding and build tool for the TIY Austin Front-End Engineering course. Feel free to use and enjoy! Feedback and PRs welcome!
+#React-Pardy! --Build Jeopardy clone with React
 
-## Features
-- A bare bones scaffolding for an SPA, without any libraries built in
-- A static server for serving up your dev environment via http
-- `app` directory for development, preloaded with an `index.html`, `scripts/entry.js`, `scss/main.scss` and `assets/`
-- `dist` directory for deployable code
-- es2015 and babel, including module syntax
-- mocha test runner, for support testing modules and react components with es2015 and jsx syntax using enzyme and chai assertion libraries
-- sass (.scss)
+##Planning Process --
+1. Sketch wireframes with endpoints and user events
+2. Data modeling with exploration of API
+3. Break wireframes into functional components including which components were nested
 
-## Installation
-- Clone this repo (or fork then clone, if you prefer)
-- Remove the git history by running `rm -rf .git`
-- Set up a new git repo
-- Run `npm install`
-- if you get permission errors you may need to run `sudo npm install` to install a couple global dependencies
+##Building Process --
+1. Constructed router with one endpoint to determine functionality
+2. Worked on smallest component first (Single Question) with hardcoded data
+3. Fetched data from server and began to build up categories
+4. Configured scoring system
+5. Styles, styles, styles!
 
-## Use
-- `npm install` will scaffold your project AND start the dev server
-- `npm start` will start the dev server and watch for changes
-- `npm test` will run any test files included in the test folder
-- `npm run deploy` will push the content of `dist/` to gh-pages
-- When the server is running, your site will be live on [http://localhost:8080/](http://localhost:8080/)
+##Challenges --
+The biggest challenges for me during this process was understanding the concept of state. This is our first week working with react so it is new territory for me. Many components relied on defining initial state as well as resetting after the components were mounted. This lead to some challenges with removing a question after it was viewed and setting a correct answer to certain colors.
 
-## Dependencies
-- `sass` [install guide here](http://sass-lang.com/install)
+##Improvements --
+1. Include a login system to allow for more than one player
+2. Include a winning/results screen
+3. Include a "new game" button so the user doesn't have to refresh the page. This is something I planned on doing but had difficulty executing.
+4. Implement a timer
